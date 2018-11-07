@@ -135,7 +135,7 @@ Component parseDesktopFile (GeneratorResult gres, Component cpt, string fname, s
     try {
         // check if we should ignore this .desktop file
         immutable dtype = df.getString (DESKTOP_GROUP, "Type");
-        if (dtype.toLower () != "application") {
+        if (dtype.toLower () != "application") && (dtype.toLower () != "zomando")) {
             // ignore this file, it isn't describing an application
             return null;
         }
